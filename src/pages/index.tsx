@@ -24,8 +24,9 @@ export default function Home() {
           />
         </div>
         <div className={styles.grid}>
-          {CONTENTS.map(content => (
+          {CONTENTS.map((content, index) => (
             <CardContent
+              key={index}
               title={content.title}
               description={content.description}
               url={content.url}
