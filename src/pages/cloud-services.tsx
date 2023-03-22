@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
+import Header from '../components/header'
 
 export default function Home() {
     const [width, setWidth] = useState(0)
@@ -24,17 +25,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <h1>{TITLE} - Mind Map</h1>
-                <h2 style={{marginBottom: 10}} >
-                    Created by:
-                    <a 
-                        style={{marginLeft: 10, color: 'cyan'}}
-                        href={AUTHOR_CONTACT} 
-                        target='_blank'
-                    >
-                        {AUTHOR}
-                    </a>
-                </h2>
+                <Header
+                    title={TITLE}
+                    authorName={AUTHOR}
+                    authorContactUrl={AUTHOR_CONTACT}
+                />
                 <iframe width={width} height={height} src={MIND_MAP_URL} />
             </main>
         </>
