@@ -41,7 +41,7 @@
 
 .grid {
   justify-content: center;
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;

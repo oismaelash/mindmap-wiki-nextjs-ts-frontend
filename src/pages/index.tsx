@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { CONTENTS } from '@/utils/constants'
+import CardContent from '@/components/CardContent'
 
 export default function Home() {
   return (
@@ -24,49 +23,14 @@ export default function Home() {
             priority
           />
         </div>
-
         <div className={styles.grid}>
-          <a
-            href="https://github.com/oismaelash/mindmap-wiki-nextjs-ts-frontend"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Github <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Open Source for All
-            </p>
-          </a>
-
-          <a
-            href="https://cloud.mindmap.wiki/aws-services"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              AWS Services <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Mind map here
-            </p>
-          </a>
-
-          <a
-            href="https://cloud.mindmap.wiki/cloud-services"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Cloud Services <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Mind map here
-            </p>
-          </a>
+          {CONTENTS.map(content => (
+            <CardContent
+              title={content.title}
+              description={content.description}
+              url={content.url}
+            />
+          ))}
         </div>
       </main>
     </>
