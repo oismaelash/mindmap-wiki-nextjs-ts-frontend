@@ -23,11 +23,9 @@
 5. Change the constants on page | e.g TITLE, AUTHOR, AUTHOR_CONTACT, MIND_MAP_URL
 6. Go to src/utils/constants.ts and add new object into CONTENTS variable with your content
 7. Open Pull Request for this repository
-8. Wait for approve
+8. Wait for approve 
 
-# 
-
-## Contact
+# Contact
 - [Site](https://www.ismaelnascimento.com)
 - [Email](mailto:contato@ismaelnascimento.com)
 - [Linkedin ](https://www.linkedin.com/in/oismaelash)
